@@ -6,8 +6,12 @@
 @import '~bootstrap/dist/css/bootstrap.css';
 body {
   font-family: "Open Sans", serif;
-  background-color: #5ca5f8 !important;
+  /* background-color: #5ca5f8 !important; */
+  background-image: url('img/blue_sky.jpg');
+  /* background-repeat: no-repeat; */
+  background-attachment: fixed;
 }
+
 /* Header */
 .app_header{
   width: 100vw;
@@ -68,6 +72,10 @@ body {
 .humid_icon-fc,
 .temp_icon-fc{
   font-size: 1rem;
+  padding: 0px !important;
+}
+.fc-item-container{
+  margin-bottom: 10px;
 }
 .forecast_desc,
 .forecast_date{
@@ -76,6 +84,7 @@ body {
 .forecast_img{
   display: block;
   margin: auto;
+  margin-top: -1rem;
 }
 .forecast_item{
   padding: 1.5rem 1rem;
@@ -83,4 +92,26 @@ body {
   background-color: #b1d4fc;
   border-radius: 20px;
   max-width: 16rem;
+}
+.bottom-grad{
+  position: fixed;
+  bottom: 0px;
+  z-index: -9;
+  width: 100%;
+  height: 200px;
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0), rgba(147,192,237,1));
+}
+@media(max-width:770px){
+  .form_container{
+    width: 90%;
+  }
+  
+}
+@media (max-width:640px){
+  .fc-item-container{
+    background-color: rgba(177, 212, 252, 0.5);
+  }
+  .forecast_item{
+    background-color: transparent;
+  }
 }

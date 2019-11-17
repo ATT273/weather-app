@@ -168,7 +168,7 @@ class App extends React.Component {
 				
 						
 						<div className="row">
-							<div className="col-md-4">
+							<div className="col-md-4 fc-item-container">
 								<Forecast
 								temperature={day2.temperature}
 								humidity={day2.humidity}
@@ -178,7 +178,7 @@ class App extends React.Component {
 								city={this.state.city}
 								/>
 							</div>
-							<div className="col-md-4">
+							<div className="col-md-4 fc-item-container">
 								<Forecast
 								temperature={day3.temperature}
 								humidity={day3.humidity}
@@ -188,7 +188,7 @@ class App extends React.Component {
 								city={this.state.city}
 								/>
 							</div>
-							<div className="col-md-4">
+							<div className="col-md-4 fc-item-container">
 								<Forecast
 								temperature={day4.temperature}
 								humidity={day4.humidity}
@@ -200,7 +200,11 @@ class App extends React.Component {
 							</div>
 						</div>
 					</div>
-										
+					{this.state.city &&
+					<div className="bottom-grad">
+					</div>
+					}
+									
 				</div>
 
 		);
